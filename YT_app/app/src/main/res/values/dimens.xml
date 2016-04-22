@@ -1,0 +1,43 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="md_text_align_base_line">72dp</dimen>
+    <dimen name="md_drawer_margin">56dp</dimen>
+    <dimen name="md_floating_action_bar_big">56dp</dimen>
+    <dimen name="md_head_portrait_big">56dp</dimen>
+    <dimen name="custom_common_block_high">56dp</dimen>
+    <dimen name="md_clickable_zone">48dp</dimen>
+    <dimen name="md_icon_small_clickable_zone">48dp</dimen>
+    <dimen name="md_buttom_navigation_bar_height">48dp</dimen>
+    <dimen name="md_floating_action_bar_small">40dp</dimen>
+    <dimen name="md_head_portrait_small">40dp</dimen>
+    <dimen name="md_common_image_size">24dp</dimen>
+    <dimen name="md_dialog_padding">24dp</dimen>
+    <dimen name="md_common_retain_zone">16dp</dimen>
+    <dimen name="customer_icon_small">16dp</dimen>
+    <dimen name="md_menu_gap">8dp</dimen>
+    <dimen name="md_card_gap">8dp</dimen>
+    <dimen name="custom_common_gap">2dp</dimen>
+    <dimen name="md_tab_buttom_line_height">2dp</dimen>
+    <dimen name="md_card_corner_border">2dp</dimen>
+
+    <!-- Text Start-->
+    <dimen name="md_text_caption">12sp</dimen>
+    <!-- 说明式文字 -->
+    <dimen name="md_text_menu">13sp</dimen>
+    <dimen name="md_text_button">14sp</dimen>
+    <dimen name="md_text_body">14sp</dimen>
+    <dimen name="md_text_subhead">16sp</dimen>
+    <!--小标题-->
+    <dimen name="md_text_title">20sp</dimen>
+    <!--标题-->
+    <dimen name="md_text_headline">24sp</dimen>
+    <!--大标题（新闻）-->
+    <dimen name="md_text_display1">34sp</dimen>
+    <dimen name="md_text_display2">45sp</dimen>
+    <dimen name="md_text_display3">56sp</dimen>
+    <dimen name="md_text_display4">112sp</dimen>
+    <!-- Text End-->
+</resources>

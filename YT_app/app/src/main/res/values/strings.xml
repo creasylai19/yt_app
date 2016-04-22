@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">YT_app</string>
+    <string name="skip_ad">跳过广告</string>
+
+    <!-- common string -->
+    <string name="loading">加载中…</string>
+    <string name="err_unknown">未知错误</string>
+    <string name="url_err">网址不对</string>
+</resources>

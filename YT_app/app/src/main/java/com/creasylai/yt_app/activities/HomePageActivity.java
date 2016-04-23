@@ -20,7 +20,6 @@ public class HomePageActivity extends BaseActivity {
 		getSupportActionBar().setDisplayShowTitleEnabled(false);
 	}
 
-
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.main_menu, menu);

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/action_bar_default_height"
+              android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_navigation_home"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/common_bg_selector"
+        android:drawableTop="@drawable/navigationbar_home_selector"
+        android:gravity="center"
+        android:paddingBottom="@dimen/md_navigation_bar_bottom"
+        android:paddingTop="@dimen/md_navigation_bar_bottom"
+        android:text="@string/navigation_home"
+        android:textColor="@color/common_grey_blue_selector"
+        android:textSize="@dimen/md_text_smallest"/>
+
+    <TextView
+        android:id="@+id/tv_navigation_channel"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/common_bg_selector"
+        android:drawableTop="@drawable/navigationbar_channel_selector"
+        android:gravity="center"
+        android:paddingBottom="@dimen/md_navigation_bar_bottom"
+        android:paddingTop="@dimen/md_navigation_bar_bottom"
+        android:text="@string/navigation_channel"
+        android:textColor="@color/common_grey_blue_selector"
+        android:textSize="@dimen/md_text_smallest"/>
+
+    <TextView
+        android:id="@+id/tv_navigation_subscribe"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/common_bg_selector"
+        android:drawableTop="@drawable/navigationbar_subcribe_selector"
+        android:gravity="center"
+        android:paddingBottom="@dimen/md_navigation_bar_bottom"
+        android:paddingTop="@dimen/md_navigation_bar_bottom"
+        android:text="@string/navigation_subscribe"
+        android:textColor="@color/common_grey_blue_selector"
+        android:textSize="@dimen/md_text_smallest"/>
+
+    <TextView
+        android:id="@+id/tv_navigation_vip"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/common_bg_selector"
+        android:drawableTop="@drawable/navigationbar_vip_selector"
+        android:gravity="center"
+        android:paddingBottom="@dimen/md_navigation_bar_bottom"
+        android:paddingTop="@dimen/md_navigation_bar_bottom"
+        android:text="@string/navigation_vip"
+        android:textColor="@color/common_grey_blue_selector"
+        android:textSize="@dimen/md_text_smallest"/>
+
+    <TextView
+        android:id="@+id/tv_navigation_user"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/common_bg_selector"
+        android:drawableTop="@drawable/navigationbar_user_selector"
+        android:gravity="center"
+        android:paddingBottom="@dimen/md_navigation_bar_bottom"
+        android:paddingTop="@dimen/md_navigation_bar_bottom"
+        android:text="@string/navigation_user"
+        android:textColor="@color/common_grey_blue_selector"
+        android:textSize="@dimen/md_text_smallest"/>
+
+</LinearLayout>

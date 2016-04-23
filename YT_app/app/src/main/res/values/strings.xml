@@ -10,4 +10,9 @@
     <string name="actionbar_game_center">游戏中心</string>
     <string name="actionbar_history">历史记录</string>
     <string name="app_other">其他</string>
+    <string name="navigation_home">首页</string>
+    <string name="navigation_subscribe">订阅</string>
+    <string name="navigation_channel">频道</string>
+    <string name="navigation_vip">会员</string>
+    <string name="navigation_user">我的</string>
 </resources>

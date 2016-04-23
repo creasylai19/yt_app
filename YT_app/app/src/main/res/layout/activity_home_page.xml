@@ -14,15 +14,18 @@
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
-    <ScrollView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ceshi"/>
+    </FrameLayout>
 
-    </ScrollView>
+    <include layout="@layout/common_line_horizontal"/>
+
+    <com.creasylai.yt_app.common.NavigationBar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_default_height">
+    </com.creasylai.yt_app.common.NavigationBar>
 
 </LinearLayout>

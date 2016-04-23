@@ -6,4 +6,8 @@
     <string name="loading">加载中…</string>
     <string name="err_unknown">未知错误</string>
     <string name="url_err">网址不对</string>
+    <string name="action_search">搜索</string>
+    <string name="actionbar_game_center">游戏中心</string>
+    <string name="actionbar_history">历史记录</string>
+    <string name="app_other">其他</string>
 </resources>

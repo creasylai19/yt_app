@@ -3,6 +3,8 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
+    <dimen name="action_bar_default_height">48dp</dimen>
+
     <dimen name="md_text_align_base_line">72dp</dimen>
     <dimen name="md_drawer_margin">56dp</dimen>
     <dimen name="md_floating_action_bar_big">56dp</dimen>
@@ -39,5 +41,6 @@
     <dimen name="md_text_display2">45sp</dimen>
     <dimen name="md_text_display3">56sp</dimen>
     <dimen name="md_text_display4">112sp</dimen>
+
     <!-- Text End-->
 </resources>

@@ -16,6 +16,7 @@ public interface AppConst {
 	interface STATIC_STRING_KEY {
 		String COMMON_KEY = "COMMON_KEY";
 		String APP_SHARE_PREFERENCE = "APP_SHARE_PREFERENCE";
+
 	}
 
 	interface STATIC_INT_KEY {
@@ -29,6 +30,13 @@ public interface AppConst {
 		int COMMON_KEY_7 = 7;
 		int COMMON_KEY_8 = 8;
 		int COMMON_KEY_9 = 9;
+
+
+		int HOME_FRAGMENT = 1;
+		int CHANNEL_FRAGMENT = 2;
+		int SUBCRIBE_FRAGMENT = 3;
+		int VIP_FRAGMENT = 4;
+		int USER_FRAGMENT = 5;
 	}
 
 }

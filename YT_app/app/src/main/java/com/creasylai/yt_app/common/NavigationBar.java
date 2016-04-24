@@ -53,6 +53,7 @@ public class NavigationBar extends LinearLayout implements View.OnClickListener 
 		tv_navigation_subscribe.setOnClickListener(this);
 		tv_navigation_vip.setOnClickListener(this);
 		tv_navigation_user.setOnClickListener(this);
+		this.tv_navigation_home.setSelected(true);
 	}
 
 	private void resumeNormalState(){

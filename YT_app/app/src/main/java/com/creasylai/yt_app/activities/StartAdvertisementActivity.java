@@ -36,7 +36,7 @@ public class StartAdvertisementActivity extends BaseActivity {
 					activityWeakReference.get().goToHomePage();
 			}
 		}
-	};
+	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

@@ -10,20 +10,28 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.creasylai.yt_app.R;
 import com.creasylai.yt_app.adapters.ImageAdapterForRecyclerView;
 import com.creasylai.yt_app.consts.AppConst;
+import com.creasylai.yt_app.singleinstance.VolleySingleInstance;
 import com.lsjwzh.widget.recyclerviewpager.LoopRecyclerViewPager;
 
-import java.lang.ref.WeakReference;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-/**
- *
- */
+import java.lang.ref.WeakReference;
+import java.util.ArrayList;
+
 public class HomeFragment extends Fragment {
 
 	private TempHandler tempHandler;
 	private LoopRecyclerViewPager mRecyclerViewPager;
+	private ArrayList<String> mDataset = new ArrayList<>();
+	private ImageAdapterForRecyclerView imageAdapterForRecyclerView;
 
 	public static HomeFragment newInstance() {
 		HomeFragment fragment = new HomeFragment();
@@ -44,13 +52,7 @@ public class HomeFragment extends Fragment {
 		mRecyclerViewPager.setTriggerOffset(0.15f);
 		mRecyclerViewPager.setFlingFactor(0.25f);
 		mRecyclerViewPager.setLayoutManager(layout);
-		mRecyclerViewPager.setAdapter(new ImageAdapterForRecyclerView(new String[]{
-				"http://h.hiphotos.baidu.com/image/pic/item/f9dcd100baa1cd11dd1855cebd12c8fcc2ce2db5.jpg",
-				"http://c.hiphotos.baidu.com/image/pic/item/d1160924ab18972bce4df718e2cd7b899f510ae8.jpg",
-				"http://d.hiphotos.baidu.com/image/pic/item/562c11dfa9ec8a13f075f10cf303918fa1ecc0eb.jpg",
-				"http://a.hiphotos.baidu.com/image/pic/item/f9dcd100baa1cd11daf25f19bc12c8fcc3ce2d46.jpg",
-				"http://e.hiphotos.baidu.com/image/pic/item/14ce36d3d539b600be63e95eed50352ac75cb7ae.jpg"
-		}, getContext()));
+
 		mRecyclerViewPager.setHasFixedSize(true);
 		mRecyclerViewPager.setLongClickable(true);
 		mRecyclerViewPager.setSinglePageFling(true);
@@ -68,6 +70,37 @@ public class HomeFragment extends Fragment {
 				return false;
 			}
 		});
+		mDataset = new ArrayList<>();
+		mDataset.add("http://r1.ykimg.com/05100000571CC9836714C007F504FD62");
+		mDataset.add("http://r2.ykimg.com/05100000571C88B16714C0081600C739");
+		mDataset.add("http://r1.ykimg.com/05100000571C88E06714C00764055BC6");
+		mDataset.add("http://r4.ykimg.com/05100000571C89126714C007DB074A21");
+		mDataset.add("http://r2.ykimg.com/05100000571CC0256714C0086F0D461A");
+		mDataset.add("http://r3.ykimg.com/05100000571CC86A6714C007D10462B0");
+		imageAdapterForRecyclerView = new ImageAdapterForRecyclerView(mDataset, getContext());
+		mRecyclerViewPager.setAdapter(imageAdapterForRecyclerView);
+		JsonObjectRequest jsonObjectRequest = new JsonObjectRequest("http://192.168.0.101:8001", null, new Response.Listener<JSONObject>() {
+			@Override
+			public void onResponse(JSONObject response) {
+				try {
+					mDataset = new ArrayList<>();
+					JSONArray jsonArray = response.getJSONArray("img_urls");
+					for (int i = 0; i < jsonArray.length(); i++) {
+						mDataset.add(jsonArray.getString(i));
+					}
+					if( mDataset.size() > 0 ) {
+						imageAdapterForRecyclerView.setDataset(mDataset);
+					}
+				} catch (JSONException e) {
+					e.printStackTrace();
+				}
+			}
+		}, new Response.ErrorListener() {
+			@Override
+			public void onErrorResponse(VolleyError error) {
+			}
+		});
+		VolleySingleInstance.getInstance(getContext()).addToRequestQueue(jsonObjectRequest);
 		return view;
 	}
 
